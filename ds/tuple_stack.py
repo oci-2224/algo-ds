@@ -5,15 +5,18 @@ T = TypeVar("T")
 
 
 class TupleStack(StackADT, Generic[T]):
-
     """
     Implements a stack ADT by storing the elements in a tuple
 
     >>> s: TupleStack[int] = TupleStack()
+    >>> s.is_empty()
+    True
     >>> s.push(3)
     >>> s.push(5)
     >>> s
     (3, 5)
+    >>> s.is_empty()
+    False
     >>> len(s)
     2
     >>> s.peek()
@@ -30,6 +33,8 @@ class TupleStack(StackADT, Generic[T]):
     Traceback (most recent call last):
     ...
     IndexError: tuple index out of range
+    >>> s.is_empty()
+    True
 
     """
 

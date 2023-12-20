@@ -61,10 +61,11 @@ class TupleStack(StackADT, Generic[T]):
     def __repr__(self) -> str:
         return repr(self._items)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     try:
         import doctest
+
         doctest.testmod()
     except:
         print("Use a standard Python interpreter to benefit from doctests")
-        
